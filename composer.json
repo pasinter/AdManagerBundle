@@ -1,0 +1,22 @@
+{
+    "name":         "pasinter/admanager-bundle",
+    "description":  "Ad Manager Bundle",
+    "keywords":     ["carousel", "ad", "advertising", "manager"],
+    "type":         "symfony-bundle",
+    "license":      "MIT",
+    "authors":      [
+        {
+            "name":     "Pasinter",
+            "homepage": "http://github.com/pasinter"
+        }
+    ],
+    "require":      {
+        "php": ">=5.3.2",
+        "symfony/symfony": "dev-master",
+        "sonata-project/media-bundle": "dev-master",
+    },
+    "autoload":     {
+        "psr-0": { "Pasinter\\Bundle\\AdManagerBundle": "" }
+    },
+    "target-dir": "Pasinter/Bundle/AdManagerBundle"
+}

@@ -1,0 +1,47 @@
+{% stylesheets filter='?yui_css'
+   '@PasinterAdManagerBundle/Resources/public/rcarousel/css/rcarousel.css'
+%}
+<link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
+{% endstylesheets %}
+
+{% javascripts
+    '@PasinterAdManagerBundle/Resources/public/rcarousel/lib/jquery.ui.core.js'
+    '@PasinterAdManagerBundle/Resources/public/rcarousel/lib/jquery.ui.widget.js'
+    '@PasinterAdManagerBundle/Resources/public/rcarousel/lib/jquery.ui.rcarousel.js'
+    output='js/head_compiled.js'
+%}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+{% endjavascripts %}
+
+<div id="carousel" style="width:710px; height: 270px;overflow: hidden;">
+    
+{% for ad in campaign.ads %}
+
+    <div class="slide">
+        <a href="{{ ad.link }}">
+        
+        {% media ad.image, 'carousel' with {'title' : ad.title} %}
+
+        </a>
+    </div>
+
+{% endfor %}
+    
+</div>
+
+<script>
+$(document).ready(function() {
+    $("#carousel").rcarousel(
+    {
+            visible: 1,
+            step: 1,
+            speed: 700,
+            auto: {
+                    enabled: true
+            },
+            width: 710,
+            height: 270
+    }
+    );
+});
+    </script>

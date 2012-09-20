@@ -1,0 +1,197 @@
+<?php
+
+namespace Pasinter\Bundle\CarouselBundle\Entity;
+
+
+class Carousel
+{
+
+  
+    /**
+     * @var string $code
+     */
+    private $code;
+
+    /**
+     * @var string $description
+     */
+    private $description;
+
+    /**
+     * @var datetime $createdAt
+     */
+    private $createdAt;
+
+    /**
+     * @var datetime $updatedAt
+     */
+    private $updatedAt;
+
+    /**
+     * @var integer $id
+     */
+    private $id;
+
+    /**
+     * @var \Doctrine\Common\Collections\ArrayCollection
+     */
+    private $slides;
+
+    public function __construct()
+    {
+        $this->slides = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+    /**
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->getCode();
+    }
+    
+    /**
+     * Set code
+     *
+     * @param string $code
+     * @return Carousel
+     */
+    public function setCode($code)
+    {
+        $this->code = $code;
+        return $this;
+    }
+
+    /**
+     * Get code
+     *
+     * @return string 
+     */
+    public function getCode()
+    {
+        return $this->code;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     * @return Carousel
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string 
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set createdAt
+     *
+     * @param datetime $createdAt
+     * @return Carousel
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+        return $this;
+    }
+
+    /**
+     * Get createdAt
+     *
+     * @return datetime 
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * Set updatedAt
+     *
+     * @param datetime $updatedAt
+     * @return Carousel
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+        return $this;
+    }
+
+    /**
+     * Get updatedAt
+     *
+     * @return datetime 
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Add slides
+     *
+     * @param Pasinter\Bundle\CarouselBundle\Entity\Slide $slides
+     * @return Carousel
+     */
+    public function addSlide(\Pasinter\Bundle\CarouselBundle\Entity\Slide $slides)
+    {
+        $this->slides[] = $slides;
+        if(null !== $slides) {
+            $slides->setCarousel($this);
+        }
+        
+        return $this;
+    }
+    
+    /**
+     *
+     * @param Pasinter\Bundle\CarouselBundle\Entity\Slide $slides
+     * @return Carousel
+     */
+    public function addSlides(\Pasinter\Bundle\CarouselBundle\Entity\Slide $slides)
+    {
+        return $this->addSLide($slides);
+    }
+
+    /**
+     * Remove slides
+     *
+     * @param Pasinter\Bundle\CarouselBundle\Entity\Slide $slides
+     */
+    public function removeSlide(\Pasinter\Bundle\CarouselBundle\Entity\Slide $slides)
+    {
+        $this->slides->removeElement($slides);
+    }
+
+    /**
+     * Get slides
+     *
+     * @return Doctrine\Common\Collections\Collection 
+     */
+    public function getSlides()
+    {
+        return $this->slides;
+    }
+}

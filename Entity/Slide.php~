@@ -1,0 +1,214 @@
+<?php
+
+namespace Pasinter\Bundle\CarouselBundle\Entity;
+
+
+class Slide
+{
+
+  
+    /**
+     * @var string $title
+     */
+    private $title;
+
+    /**
+     * @var string $link
+     */
+    private $link;
+
+    /**
+     * @var boolean $newWindow
+     */
+    private $newWindow = false;
+
+    /**
+     * @var datetime $createdAt
+     */
+    private $createdAt;
+
+    /**
+     * @var datetime $updatedAt
+     */
+    private $updatedAt;
+
+    /**
+     * @var integer $id
+     */
+    private $id;
+
+    /**
+     * @var Pasinter\Bundle\CarouselBundle\Entity\Carousel
+     */
+    private $carousel;
+
+    /**
+     * @var Application\Sonata\MediaBundle\Entity\Media
+     */
+    private $image;
+
+
+    /**
+     * Set title
+     *
+     * @param string $title
+     * @return Slide
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+        return $this;
+    }
+
+    /**
+     * Get title
+     *
+     * @return string 
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * Set link
+     *
+     * @param string $link
+     * @return Slide
+     */
+    public function setLink($link)
+    {
+        $this->link = $link;
+        return $this;
+    }
+
+    /**
+     * Get link
+     *
+     * @return string 
+     */
+    public function getLink()
+    {
+        return $this->link;
+    }
+
+    /**
+     * Set newWindow
+     *
+     * @param boolean $newWindow
+     * @return Slide
+     */
+    public function setNewWindow($newWindow)
+    {
+        $this->newWindow = $newWindow;
+        return $this;
+    }
+
+    /**
+     * Get newWindow
+     *
+     * @return boolean 
+     */
+    public function getNewWindow()
+    {
+        return $this->newWindow;
+    }
+
+    /**
+     * Set createdAt
+     *
+     * @param datetime $createdAt
+     * @return Slide
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+        return $this;
+    }
+
+    /**
+     * Get createdAt
+     *
+     * @return datetime 
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * Set updatedAt
+     *
+     * @param datetime $updatedAt
+     * @return Slide
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+        return $this;
+    }
+
+    /**
+     * Get updatedAt
+     *
+     * @return datetime 
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set carousel
+     *
+     * @param Pasinter\Bundle\CarouselBundle\Entity\Carousel $carousel
+     * @return Slide
+     */
+    public function setCarousel(\Pasinter\Bundle\CarouselBundle\Entity\Carousel $carousel = null)
+    {
+        $this->carousel = $carousel;
+        return $this;
+    }
+
+    /**
+     * Get carousel
+     *
+     * @return Pasinter\Bundle\CarouselBundle\Entity\Carousel 
+     */
+    public function getCarousel()
+    {
+        return $this->carousel;
+    }
+
+    /**
+     * Set image
+     *
+     * @param Application\Sonata\MediaBundle\Entity\Media $image
+     * @return Slide
+     */
+    public function setImage(\Application\Sonata\MediaBundle\Entity\Media $image = null)
+    {
+        $this->image = $image;
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return Application\Sonata\MediaBundle\Entity\Media 
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+}
