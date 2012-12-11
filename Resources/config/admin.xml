@@ -4,18 +4,18 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-        <service id="pasinter.ad_manager.admin.campaign" class="Pasinter\Bundle\AdManagerBundle\Admin\CampaignAdmin">
+        <service id="pasinter.ad_manager.admin.campaign" class="Pasinter\AdManagerBundle\Admin\CampaignAdmin">
             <tag name="sonata.admin" manager_type="orm" group="Ad Manager" label="Campaigns" label_translator_strategy="sonata.admin.label.strategy.native" />
             <argument />
-            <argument>Pasinter\Bundle\AdManagerBundle\Entity\Campaign</argument>
+            <argument>Pasinter\AdManagerBundle\Entity\Campaign</argument>
             <argument>SonataAdminBundle:CRUD</argument>
             
         </service>
         
-        <service id="pasinter.ad_manager.admin.ad" class="Pasinter\Bundle\AdManagerBundle\Admin\AdAdmin">
+        <service id="pasinter.ad_manager.admin.ad" class="Pasinter\AdManagerBundle\Admin\AdAdmin">
             <tag name="sonata.admin" manager_type="orm" group="Ad Manager" label="Ads" label_translator_strategy="sonata.admin.label.strategy.native" />
             <argument />
-            <argument>Pasinter\Bundle\AdManagerBundle\Entity\Ad</argument>
+            <argument>Pasinter\AdManagerBundle\Entity\Ad</argument>
             <argument>SonataAdminBundle:CRUD</argument>
             
         </service>

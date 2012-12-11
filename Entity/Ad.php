@@ -1,6 +1,6 @@
 <?php
 
-namespace Pasinter\Bundle\AdManagerBundle\Entity;
+namespace Pasinter\AdManagerBundle\Entity;
 
 
 class Ad
@@ -38,7 +38,7 @@ class Ad
     private $id;
 
     /**
-     * @var Pasinter\Bundle\AdManagerBundle\Entity\Campaign
+     * @var Pasinter\AdManagerBundle\Entity\Campaign
      */
     private $campaign;
 
@@ -176,10 +176,10 @@ class Ad
     /**
      * Set campaign
      *
-     * @param Pasinter\Bundle\AdManagerBundle\Entity\Campaign $campaign
+     * @param Pasinter\AdManagerBundle\Entity\Campaign $campaign
      * @return Ad
      */
-    public function setCampaign(\Pasinter\Bundle\AdManagerBundle\Entity\Campaign $campaign = null)
+    public function setCampaign(\Pasinter\AdManagerBundle\Entity\Campaign $campaign = null)
     {
         $this->campaign = $campaign;
         return $this;
@@ -188,7 +188,7 @@ class Ad
     /**
      * Get campaign
      *
-     * @return Pasinter\Bundle\AdManagerBundle\Entity\Campaign
+     * @return Pasinter\AdManagerBundle\Entity\Campaign
      */
     public function getCampaign()
     {

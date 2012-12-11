@@ -5,7 +5,7 @@
  * @author      Ken Golovin <ken@webplanet.co.nz>
  */
 
-namespace Pasinter\Bundle\AdManagerBundle\DependencyInjection;
+namespace Pasinter\AdManagerBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder,
     Symfony\Component\Config\Definition\ConfigurationInterface;

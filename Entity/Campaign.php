@@ -1,6 +1,6 @@
 <?php
 
-namespace Pasinter\Bundle\AdManagerBundle\Entity;
+namespace Pasinter\AdManagerBundle\Entity;
 
 
 class Campaign
@@ -151,10 +151,10 @@ class Campaign
     /**
      * Add ads
      *
-     * @param Pasinter\Bundle\AdManagerBundle\Entity\Ad $ad
+     * @param Pasinter\AdManagerBundle\Entity\Ad $ad
      * @return Campaign
      */
-    public function addAd(\Pasinter\Bundle\AdManagerBundle\Entity\Ad $ad)
+    public function addAd(\Pasinter\AdManagerBundle\Entity\Ad $ad)
     {
         $this->ads[] = $ad;
         if(null !== $ad) {
@@ -166,10 +166,10 @@ class Campaign
     
     /**
      *
-     * @param Pasinter\Bundle\AdManagerBundle\Entity\Ad $ad
+     * @param Pasinter\AdManagerBundle\Entity\Ad $ad
      * @return Campaign
      */
-    public function addAds(\Pasinter\Bundle\AdManagerBundle\Entity\Ad $ad)
+    public function addAds(\Pasinter\AdManagerBundle\Entity\Ad $ad)
     {
         return $this->addAd($ad);
     }
@@ -177,9 +177,9 @@ class Campaign
     /**
      * Remove ad
      *
-     * @param Pasinter\Bundle\AdManagerBundle\Entity\Ad $ad
+     * @param Pasinter\AdManagerBundle\Entity\Ad $ad
      */
-    public function removeAd(\Pasinter\Bundle\AdManagerBundle\Entity\Ad $ad)
+    public function removeAd(\Pasinter\AdManagerBundle\Entity\Ad $ad)
     {
         $this->ads->removeElement($ad);
     }

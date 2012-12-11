@@ -1,6 +1,6 @@
 <?php
 
-namespace Pasinter\Bundle\AdManagerBundle;
+namespace Pasinter\AdManagerBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

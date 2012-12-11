@@ -5,8 +5,8 @@
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
                   http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
-    <entity name="Pasinter\Bundle\AdManagerBundle\Entity\Campaign" table="admanager_campaigns"
-            repository-class="Pasinter\Bundle\AdManagerBundle\Repository\CampaignRepository">
+    <entity name="Pasinter\AdManagerBundle\Entity\Campaign" table="admanager_campaigns"
+            repository-class="Pasinter\AdManagerBundle\Repository\CampaignRepository">
         <id name="id" column="id" type="integer">
             <generator strategy="AUTO" />
         </id>
@@ -14,7 +14,7 @@
         <field name="code" column="code" type="string" unique="true" />
         <field name="description" column="description" type="string" nullable="true" />
         
-        <one-to-many field="ads" target-entity="Pasinter\Bundle\AdManagerBundle\Entity\Ad" mapped-by="campaign">
+        <one-to-many field="ads" target-entity="Pasinter\AdManagerBundle\Entity\Ad" mapped-by="campaign">
             <cascade>
                 <cascade-persist/>
             </cascade>

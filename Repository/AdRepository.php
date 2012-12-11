@@ -1,6 +1,6 @@
 <?php
 
-namespace Pasinter\Bundle\AdManagerBundle\Repository;
+namespace Pasinter\AdManagerBundle\Repository;
 
 
 use Doctrine\ORM\EntityRepository;

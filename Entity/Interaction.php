@@ -1,6 +1,6 @@
 <?php
 
-namespace Pasinter\Bundle\AdManagerBundle\Entity;
+namespace Pasinter\AdManagerBundle\Entity;
 
 
 class Interaction
