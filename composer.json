@@ -16,7 +16,7 @@
         "sonata-project/media-bundle": "dev-master"
     },
     "autoload":     {
-        "psr-0": { "Pasinter\\Bundle\\AdManagerBundle": "" }
+        "psr-0": { "Pasinter\\AdManagerBundle": "" }
     },
-    "target-dir": "Pasinter/Bundle/AdManagerBundle"
+    "target-dir": "Pasinter/AdManagerBundle"
 }
