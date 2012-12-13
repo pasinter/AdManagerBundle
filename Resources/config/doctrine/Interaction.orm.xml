@@ -5,8 +5,8 @@
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
                   http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
-    <entity name="Pasinter\Bundle\AdManagerBundle\Entity\Interaction" table="admanager_interactions"
-            repository-class="Pasinter\Bundle\AdManagerBundle\Repository\InteractionRepository">
+    <entity name="Pasinter\AdManagerBundle\Entity\Interaction" table="admanager_interactions"
+            repository-class="Pasinter\AdManagerBundle\Repository\InteractionRepository">
         <id name="id" column="id" type="integer">
             <generator strategy="AUTO" />
         </id>

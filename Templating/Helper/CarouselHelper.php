@@ -1,6 +1,6 @@
 <?php
 
-namespace Pasinter\Bundle\AdManagerBundle\Templating\Helper;
+namespace Pasinter\AdManagerBundle\Templating\Helper;
 
 use Symfony\Component\Templating\Helper\Helper as TemplatingHelper;
 
