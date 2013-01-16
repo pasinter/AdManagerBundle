@@ -17,6 +17,7 @@ class PasinterAdManagerExtension extends Extension
 {
     protected $resources = array(
         'admin' => 'admin.xml',
+        'twig' => 'twig.xml',
     );
 
     public function load(array $configs, ContainerBuilder $container)

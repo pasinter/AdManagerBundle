@@ -38,6 +38,6 @@ class CarouselHelper extends TemplatingHelper
      */
     public function getName()
     {
-        return 'adslot_carousel';
+        return 'admanager_carousel';
     }
 }
