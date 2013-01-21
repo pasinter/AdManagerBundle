@@ -121,7 +121,7 @@ class CampaignExtension extends \Twig_Extension implements ContainerAwareInterfa
             return $html;
         }
         
-        return '<!-- admanager_campaign_render_one: 0 results -- >';
+        return '<!-- admanager_campaign_render_one: 0 results -->';
     }
 
     /**
