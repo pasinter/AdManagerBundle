@@ -54,6 +54,16 @@ class Ad
 
 
     /**
+    * To string
+    * 
+    * @return string id
+    */ 
+    public function __toString()
+    {
+        return $this->getTitle();
+    }
+
+    /**
      * Set title
      *
      * @param string $title
