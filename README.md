@@ -53,6 +53,19 @@ Install & configure SonataAdminBundle (https://github.com/sonata-project/SonataA
 $ php app/console doctrine:schema:update --force
 ```
 
++### Step 5: Update your app/config/config.yml
+``` yml
+sonata_media:
+    contexts:
+        admanager:
+            providers:
+                - sonata.media.provider.image
+            formats:
+                small: { width: 150 , quality: 95 } # use your desired format
+                big:   { width: 500 , quality: 90 } # use your desired format
+                carousel: { width: 710, quality: 90} # use your desired format
+```
+
 
 ## Usage
 
