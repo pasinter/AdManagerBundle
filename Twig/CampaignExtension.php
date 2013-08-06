@@ -75,19 +75,21 @@ class CampaignExtension extends \Twig_Extension implements ContainerAwareInterfa
             $html = '<div id="carousel" style="width:710px; height: 270px;overflow: hidden;">';
             //return $campaign->getContent();
             
+            $mediaservice = $this->container->get('sonata.media.pool');
+            
             foreach($campaign->getAds() as $ad) {
                 $media = $ad->getImage();
                 
-                $mediaservice = $this->container->get('sonata.media.pool');
-                $provider = $mediaservice->getProvider($media->getProviderName());
-                $format = $provider->getFormatName($media, 'big');
-                
-                
-                $html .= '<div class="slide">';
-                $html .= '<a href="' . $ad->getLink() . '">';
-                $html .= '<img src="' . $provider->generatePublicUrl($media, $format) .  '" width="710" height="270">';
-                $html .= '</a>';
-                $html .= '</div>';
+                if (!empty($media)) {
+                    $provider = $mediaservice->getProvider($media->getProviderName());
+                    $format = $provider->getFormatName($media, 'big');
+
+                    $html .= '<div class="slide">';
+                    $html .= '<a href="' . $ad->getLink() . '">';
+                    $html .= '<img src="' . $provider->generatePublicUrl($media, $format) .  '" width="710" height="270">';
+                    $html .= '</a>';
+                    $html .= '</div>';
+                }
             }
             
             $html .= '</div>';
