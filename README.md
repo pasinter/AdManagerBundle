@@ -19,7 +19,7 @@ Add the following to your `composer.json`:
 ```js
 "require": {
     ...
-    "pasinter/admanager-bundle": "dev-master",
+    "pasinter/admanager-bundle": "2.1.*@dev"
     ...
 }
 ```
