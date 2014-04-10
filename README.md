@@ -7,7 +7,7 @@ This Symfony2 bundle offers a simple interface to manage website advertising.
 
 ## Prerequisites
 
-This version of the bundle requires Symfony 2.1+. 
+This version of the bundle requires Symfony 2.3. 
 
 ##Installation
 
