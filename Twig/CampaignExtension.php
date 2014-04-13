@@ -46,7 +46,7 @@ class CampaignExtension extends \Twig_Extension implements ContainerAwareInterfa
      */
     public function get($code, array $options = array())
     {
-        $em = $this->container->get('doctrine')->getEntityManager(); 
+        $em = $this->container->get('doctrine')->getManager(); 
         
         $qb = $em->getRepository('PasinterAdManagerBundle:Campaign')->createQueryBuilder('c');
         
