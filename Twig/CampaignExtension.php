@@ -73,7 +73,6 @@ class CampaignExtension extends \Twig_Extension implements ContainerAwareInterfa
 
         if($campaign) {
             $html = '<div id="carousel" style="width:710px; height: 270px;overflow: hidden;">';
-            //return $campaign->getContent();
             
             $mediaservice = $this->container->get('sonata.media.pool');
             
